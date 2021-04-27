@@ -1,0 +1,11 @@
+<div class="background">
+    <div class="container">
+        <a id="shortenUrl" [href]="shortenUrl" target="_blank" class="generated-url">{{ shortenUrl }}</a>
+        <form #form="ngForm" ngNativeValidate (ngSubmit)="onFormSubmit(form)">
+            <input  #urlField="ngModel" class="textbox" ngModel type="url" name="url" placeholder="Enter url here..."
+                required>
+            <button type="submit" class="btn submit">GO</button>
+            <button class="btn submit" data-clipboard-target="#shortenUrl">COPY</button>
+        </form>
+    </div>
+</div>
